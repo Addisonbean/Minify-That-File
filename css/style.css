@@ -10,7 +10,7 @@ body {
 
 #container {
 	width: 960px;
-	margin: 0 auto;
+	margin: 25px auto;
 	font-family: 'clear_sans';
 	color: #333;
 }
@@ -27,7 +27,7 @@ body {
 	padding: 10px 15px;
 	border-radius: 12px;
 	border: 3px solid rgb(75, 75 ,75);
-	margin: 25px auto;
+	margin: 0px auto;
 }
 
 	#tutorial > h2 {
@@ -68,3 +68,8 @@ body {
 		#tutorial button:hover {
 			background-color: #cecece;
 		}
+
+
+	input[name=bytes] + p {
+		display: inline;
+	}
