@@ -1,33 +1,14 @@
 <?php
 
 $old_path = "code";
-$new_path = "$old_path/compressed";
 $file_name = "example.js";
 
 $old_file = file_get_contents("$old_path/$file_name");
-$new_file = file_get_contents("$new_path/$file_name");
-
 $old_bytes = filesize("$old_path/$file_name");
-$new_bytes = filesize("$new_path/$file_name");
+
+include 'php/layout.php';
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Minify That File</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/prism.css">
-</head>
-<body>
-
-	<div id="container">
-		
-		<h1 id="main-title">Minify That File!</h1>
-
 		<div id="tutorial">
 			<h2>How to play:</h2>
 			<ul>
@@ -39,7 +20,10 @@ $new_bytes = filesize("$new_path/$file_name");
 				<li>After each file you guess, you will get a percent error.</li>
 				<li>At the end of the game, your average percent error from each round will be your score. (So a lower score is better!)</li>
 			</ul>
-			<form action="php/start.php">
+			<form action="play.php" method="post">
+				<input type="hidden" name="unused_files" value="webgl.js,example.js">
+				<input type="hidden" name="perror_list" value="">
+				<input type="hidden" name="round" value="1">
 				<button type="submit">Start playing!</button>
 			</form>
 		</div>

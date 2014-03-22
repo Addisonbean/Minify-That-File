@@ -1,6 +1,8 @@
 <?php 
 
-$unused_files = explode(",", $_COOKIE['minify_unused_files']);
+$perror_list = $_POST['perror_list'];
+$round = $_POST['round'];
+$unused_files = explode(",", $_POST['unused_files']);
 shuffle($unused_files);
 
 $old_path = "code";
@@ -34,32 +36,23 @@ switch ($ext) {
 		break;
 }
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Minify That File</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/prism.css">
-</head>
-<body>
+include 'php/layout.php';
 
-	<div id="container">
-		<h1 id="main-title">Minify That File!</h1>
+?>
 		<ul>
 			<li><span class="bytes"><?= $old_bytes ?> bytes</span></li>
 			<pre class="line-numbers"><code class="language-<?= $language ?>"><?= $old_file ?></code></pre>
 		</ul>
-		<form action="php/next.php" method="post">
+		<form action="results.php" method="post">
 			<label for="bytes">Bytes after minification: </label>
 			<input type="number" name="guess">
 			<p>bytes</p>
+			<br>
+			<button type="submit">Submit</button>
+			<input type="hidden" name="perror_list" value="<?= $perror_list ?>">
 			<input type="hidden" name="unused_files" value="<?= $new_files ?>">
 			<input type="hidden" name="used_file" value="<?= $file_name ?>">
-			<button type="submit">Submit</button>
+			<input type="hidden" name="round" value="<?= $round ?>">
 		</form>
 	</div>
 <script src="js/prism.js"></script>

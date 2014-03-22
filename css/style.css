@@ -30,46 +30,63 @@ body {
 	margin: 0px auto;
 }
 
-	#tutorial > h2 {
-		font-size:19px;
-		font-weight: 700;
-		font-family: 'clear_sans';
-	}
+#tutorial > h2 {
+	font-size: 19px;
+	font-weight: 700;
+}
 
-	#tutorial > ul {
-		padding-left: 20px;
-	}
+#tutorial > ul {
+	padding-left: 20px;
+}
 
-		#tutorial li {
-			margin: 10px 0;
-		}
+#tutorial li {
+	margin: 10px 0;
+}
 
-		.bytes {
-			display: inline-block;
-			margin: 15px 0 0 20px;
-		}
+.bytes {
+	display: inline-block;
+	margin: 15px 0 0 20px;
+}
 
-	#tutorial form {
-		width: 125px;
-		margin: 10px auto;
-	}
+#tutorial form {
+	width: 125px;
+	margin: 10px auto;
+}
 
-		#tutorial button {
-			background-color: #ddd;
-			border: none;
-			border-radius: 5px;
-			display: inline-block;
-			width: inherit;
-			height: 30px;
-			font-size: 15px;
-			padding: 5px 8px;
-		}
+#tutorial button {
+	background-color: #ddd;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	width: inherit;
+	height: 30px;
+	font-size: 15px;
+	padding: 5px 8px;
+}
 
-		#tutorial button:hover {
-			background-color: #cecece;
-		}
+#tutorial button:hover {
+	background-color: #cecece;
+}
 
+input[type=number] + p {
+	display: inline;
+}
 
-	input[name=bytes] + p {
-		display: inline;
-	}
+#stats {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#stats > h2 {
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+}
+
+#stats > p {
+	text-align: center;
+	margin: 25px;
+	font-weight: 700;
+	font-size: 50px;
+}
+
