@@ -11,5 +11,5 @@
 <body>
 
 	<div id="container">
-		
+
 		<h1 id="main-title">Minify That File!</h1>
