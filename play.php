@@ -48,7 +48,7 @@ include 'php/layout.php';
 			<input type="number" name="guess">
 			<p>bytes</p>
 			<br>
-			<button type="submit">Submit</button>
+			<button class="btn" type="submit">Submit</button>
 			<input type="hidden" name="perror_list" value="<?= $perror_list ?>">
 			<input type="hidden" name="unused_files" value="<?= $new_files ?>">
 			<input type="hidden" name="used_file" value="<?= $file_name ?>">

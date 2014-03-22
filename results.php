@@ -34,7 +34,7 @@ include 'php/layout.php';
 			<input type="hidden" name="unused_files" value="<?= $unused_files ?>">
 			<input type="hidden" name="used_file" value="<?= $file_name ?>">
 			<input type="hidden" name="round" value="<?= $round ?>">
-			<button type="submit">Next Round</button>
+			<button class="btn" type="submit">Next Round</button>
 		</form>
 	</div>
 </body>

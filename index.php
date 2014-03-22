@@ -6,6 +6,14 @@ $file_name = "example.js";
 $old_file = file_get_contents("$old_path/$file_name");
 $old_bytes = filesize("$old_path/$file_name");
 
+$file_list = scandir("code/compressed");
+// unset($file_list["."]);
+// unset($file_list[".."]);
+// $file_list = array_values($file_list);
+$file_list = array_splice($file_list, 2);
+
+$all_files = implode(",", $file_list);
+
 include 'php/layout.php';
 
 ?>
@@ -13,7 +21,7 @@ include 'php/layout.php';
 			<h2>How to play:</h2>
 			<ul>
 				<li>You will be given the some code and the amount amount of bytes it is, like the following: </li>
-				<li><span class="bytes"><?= $old_bytes ?> bytes</span></li>
+				<span class="bytes"><?= $old_bytes ?> bytes</span>
 				<li><pre class="line-numbers"><code class="language-javascript"><?= $old_file ?></code></pre></li>
 				<li>You will have to guess the amount of bytes the file is after it is minified.</li>
 				<li>To avoid cheating you will have 15 seconds to answer.</li>
@@ -21,10 +29,10 @@ include 'php/layout.php';
 				<li>At the end of the game, your average percent error from each round will be your score. (So a lower score is better!)</li>
 			</ul>
 			<form action="play.php" method="post">
-				<input type="hidden" name="unused_files" value="webgl.js,example.js">
+				<input type="hidden" name="unused_files" value="<?= $all_files ?>">
 				<input type="hidden" name="perror_list" value="">
 				<input type="hidden" name="round" value="1">
-				<button type="submit">Start playing!</button>
+				<button class="btn" type="submit">Start playing!</button>
 			</form>
 		</div>
 
