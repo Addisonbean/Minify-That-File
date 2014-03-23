@@ -66,6 +66,7 @@ button.btn {
 	font-size: 15px;
 	padding: 5px 8px;
 	color: #444;
+	margin: 20px 0;
 }
 
 button.btn:hover {
@@ -76,7 +77,11 @@ input[type=number] + p {
 	display: inline;
 }
 
-#stats {
+#perror {
+	text-align: center;
+}
+
+#stats, #perror {
 	width: 400px;
 	margin: 0 auto;
 }
