@@ -1,3 +1,6 @@
+/* color scheme: */
+/* https://kuler.adobe.com/Subtle-Complement-color-theme-3688146/edit/?copy=true&base=2&rule=Custom&selected=4&name=Copy%20of%20Subtle%20Complement&mode=rgb&rgbvalues=0.5490196078431373,0.48627450980392156,0.43529411764705883,1,0.996078431372549,0.9882352941176471,0.8509803921568627,0.8,0.7568627450980392,0.3803921568627451,0.5254901960784314,0.5490196078431373,0.7568627450980392,0.8352941176470589,0.8509803921568627&swatchOrder=0,1,2,3,4 */ 
+
 * { 
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -5,30 +8,29 @@
 }
 
 body {
-	/*background-color: rgb(245, 246, 242);*/
-	background-color: #F7F6EA;
-
+	background-color: #FFFEFC;
+	font-family: 'clear_sans';
+	color: #3E5359;
 }
 
 #container {
 	width: 960px;
 	margin: 25px auto;
-	font-family: 'clear_sans';
-	color: #50574D;
 }
 
 #main-title {
-	margin: 50px auto;
+	margin: 0 auto;
 	text-align: center;
-	font-weight: 600;
-	font-size: 40px;
+	font-size: 45px;
+	background-color: #61868C;
+	padding: 20px;
+	color: #253A40;
+	font-family: quatro-slab, georgia, serif;
 }
 
 #tutorial {
 	width: 850px;
 	padding: 10px 15px;
-	/*border-radius: 12px;*/
-	/*border: 3px solid #888;*/
 	margin: 0px auto;
 }
 
@@ -37,18 +39,17 @@ body {
 	font-weight: 700;
 }
 
-#tutorial > ul {
-	padding-left: 20px;
-	list-style-type: disc;
-}
-
 #tutorial li {
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .bytes {
 	display: inline-block;
-	margin: 15px 0 0 20px;
+	margin: 15px 0 10px 20px;
+	background-color: #660022;
+	padding: 7px;
+	border-radius: 5px;
+	color: #FFFEFC;
 }
 
 #tutorial form {
@@ -57,20 +58,20 @@ body {
 }
 
 button.btn {
-	background-color: #ddd;
+	background-color: #DDD;
 	border: none;
 	border-radius: 5px;
 	display: inline-block;
 	width: inherit;
 	height: 30px;
 	font-size: 15px;
-	padding: 5px 8px;
-	color: #444;
+	padding: 7px 9px;
+	color: #3E5359;
 	margin: 20px 0;
 }
 
 button.btn:hover {
-	background-color: #cecece;
+	background-color: #CECECE;
 }
 
 input[type=number] + p {
@@ -84,6 +85,12 @@ input[type=number] + p {
 #stats, #perror {
 	width: 400px;
 	margin: 0 auto;
+}
+
+#perror p {
+	margin: 15px;
+	font-weight: 700;
+	font-size: 45px;
 }
 
 #stats > h2 {

@@ -13,13 +13,18 @@ $perror_list = implode(",", array($perror, $old_list));
 
 $unused_files = $_POST['unused_files'];
 $unused_files_count = explode(",", $unused_files);
+
 if ($round >= 5) {
 	$action = "done";
 	$btn_text = "Finish";
 } else {
 	$round += 1;
 	$action = "play";
-	$btn_text = "Next Round";
+	if ($round == 5) {
+		$btn_text = "Final Round";
+	} else {
+		$btn_text = "Next Round";
+	}
 }
 
 include 'php/layout.php';
